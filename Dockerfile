@@ -9,6 +9,9 @@ RUN apt-get -yqq install python-pip python-dev
 #RUN apt-get -yqq install nodejs npm
 #RUN ln -s /usr/bin/nodejs /usr/bin/node
 
+# set environment variable for debug
+ENV FLASK_DEBUG 1
+
 # copy our application code
 ADD flask-app /opt/flask-app
 WORKDIR /opt/flask-app
